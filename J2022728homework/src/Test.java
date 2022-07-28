@@ -121,6 +121,20 @@ public class Test {
     public static void main(String[] args) {
         Scanner scan  = new Scanner(System.in);
         int num = scan.nextInt();
+        int i= 0;
+        System.out.println("偶数位序列");
+        for(i = 0; i < 32; i+=2)
+        {
+            System.out.print((num>>i) & 1);
+        }
+        System.out.print('\n');
+        System.out.println("奇数位序列");
+        for(i = 1; i < 32; i+=2)
+        {
+            System.out.print((num>>i) & 1);
+        }
+        scan.close();
+    }
 
     }
 }
