@@ -44,7 +44,7 @@ public class Test {
         }
         System.out.println(sum);
 
-    }
+    }  
     public static void main2(String[] args) {
         int i = 0;
         int ret = 0;
