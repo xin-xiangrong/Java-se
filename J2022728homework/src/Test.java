@@ -17,6 +17,27 @@ public class Test {
         System.out.println("二进制1的个数:>"+count);
         scanner.close();
     }
+    public static void main11(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int count = 0;
+        while (n != 0){
+            if((n & 1) ==1){
+                count++;
+            }
+            n = n>>>1;
+        }
+    }
+    public static void main111(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int count = 0;
+        while (n > 0){
+            n = n & (n-1);
+           count++;
+        }
+        System.out.println(count);
+    }
     //计算1/1-1/2+1/3-1/4+1/5 …… + 1/99 - 1/100 的值 。
     public static void main2(String[] args){
         int i = 1;
@@ -137,4 +158,17 @@ public class Test {
     }
 
     }
+    lic static void main(String[] args){
+        int i = 0;
+        int j = 0;
+        for (i = 1; i <= 100; i++){
+            for(j = 2; j < (int)Math.sqrt(i); j++){
+                if(i % j == 0){
+                    break;
+                }
+            }
+            if(j >= (int)Math.sqrt(i)){
+                System.out.println(i);
+            }
+        }
 }
