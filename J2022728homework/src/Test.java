@@ -158,7 +158,8 @@ public class Test {
     }
 
     }
-    lic static void main(String[] args){
+    //打印1-100之间的素数
+    public static void main(String[] args){
         int i = 0;
         int j = 0;
         for (i = 1; i <= 100; i++){
