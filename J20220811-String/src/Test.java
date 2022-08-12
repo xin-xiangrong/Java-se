@@ -1,6 +1,60 @@
 public class Test {
+	public static void main(String[] args) {
+        String s = "xinxinxiangrong";
+        Boolean flag = s.contains("xin");
+        System.out.println(flag);
+        System.out.println(s.contains("abc"));
+        System.out.println(s.concat("abc"));
+    }
+    //去掉字符串左右两边的空格
+    public static void main12(String[] args) {
+        String s = "    xin xin xiang rong    ";
+        System.out.println("["+s+"]");
+        System.out.println("["+s.trim()+"]");
+
+    }
+    //字符串截取
+    public static void main11(String[] args) {
+      String str = "xinxinxiangrong";
+      String str2 = str.substring(11);
+      System.out.println(str2);
+      System.out.println(str.substring(5,14));//左闭右开
+    }
+    public static void main10(String[] args) {
+        //字符串多次拆封
+        String str = "name=zhangsan&age=18" ;
+        String[] result = str.split("&") ;
+        for (int i = 0; i < result.length; i++) {
+            String[] temp = result[i].split("=") ;
+            System.out.println(temp[0]+" = "+temp[1]);
+        }
+    }
+    public static void main9(String[] args) {
+        //字符串多次拆封
+        String str = "xin&xin=xiang&rong";
+        String[] str1 = str.split("&");
+        for (int i = 0; i < str1.length; i++) {
+            String[] str2 = str1[i].split("=");
+            for (String x:str2) {
+                System.out.println(x);
+            }
+        }
+    }
+    //字符串拆封
+    public static void main8(String[] args) {
+        String str = "xin&xin*xiang&rong";
+        String[] str1 = str.split("&");
+        System.out.println(Arrays.toString(str1));
+        String[] str2 = str.split("&|\\*");
+        System.out.println(Arrays.toString(str2));
+        String[] str3 = str.split("&|\\*",2);
+        System.out.println(Arrays.toString(str3));
+        String s = "xin\\xin\\xiang\\rong";
+        String[] s1 = s.split("\\\\");
+        System.out.println(Arrays.toString(s1));
+    }
     //字符串替换
-    public static void main(String[] args) {
+    public static void main7(String[] args) {
         String str = "xinxinxiangrong";
         String str1 = str.replace('x','y');
         System.out.println(str1);
