@@ -29,7 +29,7 @@ class Person implements Cloneable{
         return "Person{" +
                 "id=" + id +
                 ", money=" + money.m +
-                '}';
+                '}';   
     }
 }
 public class Test2 {
